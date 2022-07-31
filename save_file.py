@@ -17,7 +17,7 @@ def saveToFile(url):
     title, lyrics_text = fetchLyrics(url)
 
     cd = os.getcwd()
-    text_file = open(f"{cd}\\Lyrics_data\\{title}.txt", "w")
+    text_file = open(f"{cd}\\Lyrics_data\\{title}.txt", "w", encoding = "utf-8")
     text_file.write(lyrics_text)
     text_file.close()
     
