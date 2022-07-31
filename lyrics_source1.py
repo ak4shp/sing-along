@@ -26,7 +26,7 @@ def replaceFromLyrics(lyrics):
     return lyrics
 
 
-def fetchLyrics(url):
+def fetch_Source1_Lyrics(url):
     response = rqs.get(url)
     soup = bfs(response.text, 'lxml')
 
