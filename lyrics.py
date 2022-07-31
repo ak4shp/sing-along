@@ -17,6 +17,7 @@ def replaceFromLyrics(lyrics):
                     '<br/>' : "\n", 
                     '</p>' : "", 
                     '</blockquote> </div>' : "", 
+                    '</div>' : "", 
                     '[' : "", 
                     ']' : ""
                     }
