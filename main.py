@@ -9,7 +9,7 @@ def writeLyrics(choice):
         print("PLEASE ENTER INTEGER ONLY !!")
 
     if choice == 1:
-        url = input("Enter 'Lyricsgram' URL :  ")
+        url = input("Enter URL :  ")
         saveToFile(url)
     
     elif choice == 2:
@@ -22,7 +22,8 @@ def writeLyrics(choice):
 
 
 if __name__ == "__main__":
-    choice = input("Direct link(1) or \nFile on current path(2) -->  ")
+    source = input("Lyrics source - (1) Gaana.com\n\t\t(2) Lyricsgram -> ")
+    choice = input("\n\t(1) Direct link\n\t(2) 'links.txt' file -->  ")
     writeLyrics(choice)
     print("\n**** PROCESS COMPLETED ****")
 
