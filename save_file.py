@@ -12,11 +12,27 @@ def makeDIR():
         os.mkdir(new_dir)
 
 
+def select_save_format():
+    val = input("Output Format - (1) txt\n\t\t(2) src -> ")
+    try:
+        val = int(val)
+    except ValueError:
+        print("PLEASE ENTER INTEGER ONLY !!")
+
+    if val == 1:
+        save_type = '.txt'
+    elif val == 2:
+        save_type = '.src'
+    else:
+        print("Select  1  or  2  only !!")
+    return save_type
+
 def saveToFile(url):
     makeDIR()
     title, lyrics_text = choose_source(url)
+    save = select_save_format()
     cd = os.getcwd()
-    text_file = open(f"{cd}\\Lyrics_data\\{title}.txt", "w", encoding = "utf-8")
+    text_file = open(f"{cd}\\Lyrics_data\\{title}{save}", "w", encoding = "utf-8")
     text_file.write(lyrics_text)
     text_file.close()
     
