@@ -1,4 +1,4 @@
-from lyrics import fetchLyrics
+from lyrics_source1 import fetchLyrics
 import os
 
 
