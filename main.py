@@ -18,11 +18,11 @@ def writeLyrics(choice):
             if url:
                 saveToFile(url.strip())
     else:
-        print("Please choose either  1  or  2  only !!")
+        print("Choose either  1  or  2 !!")
 
 
 if __name__ == "__main__":
-    choice = input("\n\t(1) Direct link\n\t(2) 'links.txt' file -->  ")
+    choice = input("\n\t(1) Direct URL\n\t(2) 'links.txt' file -->  ")
     writeLyrics(choice)
     print("\n**** PROCESS COMPLETED ****")
 

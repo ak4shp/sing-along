@@ -24,13 +24,16 @@ def select_save_format():
     elif val == 2:
         save_type = '.src'
     else:
-        print("Select  1  or  2  only !!")
+        save_type = '.txt'
+        print("'.txt' saved as default. Select  1  or  2  only !!")
     return save_type
+
+save = select_save_format()
+
 
 def saveToFile(url):
     makeDIR()
     title, lyrics_text = choose_source(url)
-    save = select_save_format()
     cd = os.getcwd()
     text_file = open(f"{cd}\\Lyrics_data\\{title}{save}", "w", encoding = "utf-8")
     text_file.write(lyrics_text)
