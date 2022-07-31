@@ -17,15 +17,19 @@ def replaceFromLyrics(lyrics: str):
     return lyrics
 
 
-url = " "
-response = rqs.get(url)
-soup = bfs(response.text, 'lxml')
+def fetch_Source2_Lyrics(url : str):
+    response = rqs.get(url)
+    soup = bfs(response.text, 'lxml')
 
-# Lyrics TITLE
-title_header = str(soup.find('h1', class_ = 'title t_over'))
-title_str = title_header[32:].split("Lyrics")
-title = title_str[0].strip()
+    # Lyrics TITLE
+    title_header = str(soup.find('h1', class_ = 'title t_over'))
+    title_str = title_header[32:].split("Lyrics")
+    title = title_str[0].strip()
 
-# LYRICS
-lyrics_header = str(soup.find_all('div', class_ = 'lyr_data'))
-lyrics_str = replaceFromLyrics(lyrics_header)
+    # LYRICS
+    lyrics_header = str(soup.find_all('div', class_ = 'lyr_data'))
+    lyrics_str = replaceFromLyrics(lyrics_header)
+
+    # Lyrics TEXT
+    lyrics_text = f"** {title} **\n\n {lyrics_str}"
+    return title, lyrics_text
