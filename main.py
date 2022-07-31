@@ -22,7 +22,6 @@ def writeLyrics(choice):
 
 
 if __name__ == "__main__":
-    source = input("Lyrics source - (1) Gaana.com\n\t\t(2) Lyricsgram -> ")
     choice = input("\n\t(1) Direct link\n\t(2) 'links.txt' file -->  ")
     writeLyrics(choice)
     print("\n**** PROCESS COMPLETED ****")

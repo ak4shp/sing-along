@@ -1,4 +1,4 @@
-from lyrics_source1 import fetchLyrics
+from sources import choose_source
 import os
 
 
@@ -14,8 +14,7 @@ def makeDIR():
 
 def saveToFile(url):
     makeDIR()
-    title, lyrics_text = fetchLyrics(url)
-
+    title, lyrics_text = choose_source(url)
     cd = os.getcwd()
     text_file = open(f"{cd}\\Lyrics_data\\{title}.txt", "w", encoding = "utf-8")
     text_file.write(lyrics_text)
