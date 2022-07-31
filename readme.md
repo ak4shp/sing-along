@@ -2,6 +2,9 @@ Welcome to Sing Along !!
 <br>
 It is a command line based application to scrap lyrics from 'lyricsgram' website and put them into '.txt' file.
 <br>
+Both English version (i.e. http://www.lyricsgram.com/...) and Hindi version (i.e. http://hindi.lyricsgram.com/...) are supported.
+<br>
+
 There are two ways to do so -
 
 1. By directly putting link into command line interface.
